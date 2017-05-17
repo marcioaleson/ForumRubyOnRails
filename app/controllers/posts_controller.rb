@@ -1,11 +1,11 @@
 class PostsController < ApplicationController
-  before_action :find_post, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, :find_post, only: [:show, :edit, :update, :destroy]
   def index
     @post = Post.all.order("created_at DESC")
   end
 
   def new
-    @post = Post.new
+    @post = current_user.post.build
   end
 
   def show
@@ -13,7 +13,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post  = Post.new(post_params)
+    @post  = current_user.post.build(post_params)
 
     if @post.save
       redirect_to @post
