@@ -11,7 +11,12 @@
         #logo
             %p= link_to "Márcio's Rails Forum", root_path
         #buttons
-            = link_to "New Post", new_post_path
+            - if user_signed_in?
+                = link_to "New Post", new_post_path
+                = link_to "Sign out", destroy_user_session_path, method: :delete
+            - else
+                = link_to "Sign Up", new_user_registration_path
+                = link_to "Sign In", new_user_session_path
     .wrapper
         %p.notice= notice
         %p.alert= alert
