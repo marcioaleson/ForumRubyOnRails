@@ -1,7 +1,8 @@
 class CommentsController < ApplicationController
   def create
     @post = Post.find(params[:post_id])
-    @comment = @opst.comments.create(params[:comment].permit[:comment])
+    @comment = @post.comments.create(params[:comment].permit[:comment])
+
 
     if @comment.save
       redirect_to post_path(@post)
