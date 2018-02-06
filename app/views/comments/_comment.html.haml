@@ -1,3 +1,4 @@
 .comment
     %p= comment.comment
     %p= comment.user.email
+    = link_to "Delete Replay", [comment.post, comment], method: :delete, data: {confirm: "Are you sure?"}
