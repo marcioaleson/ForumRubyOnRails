@@ -108,4 +108,58 @@ body{
      font-weight: 100;
      line-height: 1.5;
    }
+   #comments {
+     .comment {
+       border-bottom: 1px solid #d1d1d1;
+       padding-bottom: 1em;
+       margin-bottom: 1em;
+       .comment_content{
+         margin: 0;
+         padding: 0;
+       }
+       .comment_author{
+         color: #397cac;
+         margin-top: 0.5em;
+         font-size: 0.8em;
+         font-weight: 700;
+       }
+     }
+     #buttons{
+       float: inherit;
+       a {
+         line-height: 60px;
+         background: #397cac;
+         padding: .5em 1em;
+         border-radius: 0.2em;
+         color: white;
+         text-decoration:none;
+         font-weight: 100;
+       }
+     }
+     input[type="submit"]{
+       line-height: 40px;
+       background: #397cac;
+       padding: .5em 1em;
+       border-radius: 0.2em;
+       color: white;
+       text-decoration:none;
+       font-weight: 100;
+     }
+     textarea{
+       width: 100%;
+       min-height: 200px;
+       border: 1px solid #d1d1d1;
+       border-radius: 0.2em;
+       margin: 1em 0;
+     }
+   }
+   a {
+     line-height: 60px;
+     background: #397cac;
+     padding: .5em 1em;
+     border-radius: 0.2em;
+     color: white;
+     text-decoration:none;
+     font-weight: 100;
+   }
  }
